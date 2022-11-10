@@ -13,12 +13,16 @@ public class TicTacToe implements ActionListener{
     JLabel textfield = new JLabel();
     JButton[] buttons = new JButton[9];
     boolean player1_turn;
+    ImageIcon image = new ImageIcon("out/production/TicTacToe/Tic_Tac_Toe/logo.png");
 
     TicTacToe(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800,800);
+        frame.setResizable(false);
         frame.getContentPane().setBackground(new Color(50,50,50));
         frame.setLayout(new BorderLayout());
+        frame.setTitle("Tic Tac Toe");
+        frame.setIconImage(image.getImage());
         frame.setVisible(true);
 
         textfield.setBackground(new Color(25,25,25));
@@ -32,7 +36,7 @@ public class TicTacToe implements ActionListener{
         title_panel.setBounds(0,0,800,100);
 
         button_panel.setLayout(new GridLayout(3,3));
-        button_panel.setBackground(new Color(150,150,150));
+        button_panel.setBackground(new Color(100,100,100));
 
         title_panel.add(textfield);
         frame.add(title_panel);
