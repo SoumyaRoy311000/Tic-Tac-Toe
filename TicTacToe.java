@@ -35,10 +35,12 @@ public class TicTacToe implements ActionListener{
         button_panel.setBackground(new Color(150,150,150));
 
         title_panel.add(textfield);
+        frame.add(title_panel);
+        firstTurn();
         frame.add(title_panel,BorderLayout.NORTH);
         frame.add(button_panel);
 
-        firstTurn();
+
 
         for (int i = 0; i < 9; i++) {
             buttons[i] = new JButton();
